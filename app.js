@@ -24,6 +24,7 @@ $(document).ready(function () {
       // .attr('viewbox', '0 0 ' + width + ' ' + height)
       // .attr('preserveAspectRatio', 'xMidYMid')
       .append('g')
+      .attr('transform', 'translate(0, -100)')
       // .attr('transform', function () {
       //   // return 'scale(0.5) translate(0,' + svgHeight/2 + ')'
       //   console.log(svgWidth, svgHeight)
@@ -93,7 +94,7 @@ $(document).ready(function () {
            return svgHeight * 0.7;
         })
         .attr('height', function(d) {
-          return d * 0.7;
+          return d * 0.5;
         })
         .attr('fill', function(d, i) {
           // return 'rgb(0, 0, ' + d + ')';
