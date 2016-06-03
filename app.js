@@ -25,6 +25,8 @@ $(document).ready(function () {
       // .attr('preserveAspectRatio', 'xMidYMid')
       .append('g')
       .attr('transform', 'translate(0, -100)')
+      // .attr('height', height * 1.5)
+      // .attr('width', width * 1.5)
       // .attr('transform', function () {
       //   // return 'scale(0.5) translate(0,' + svgHeight/2 + ')'
       //   console.log(svgWidth, svgHeight)
@@ -39,6 +41,9 @@ $(document).ready(function () {
     d3.select('svg')
     .attr('height', svgHeight)
     .attr('width', svgWidth)
+    // d3.select('g')
+    // .attr('height', svgHeight * 1.5)
+    // .attr('width', svgWidth * 1.5)
   })
 
   var svg = createSvg('#mp3_player', svgHeight, svgWidth);
@@ -79,7 +84,7 @@ $(document).ready(function () {
      // Copy frequency data to frequencyData array.
      analyser.getByteFrequencyData(frequencyData);
      // var color = d3.scale.category10().domain([0, frequencyData.length])
-     var color = d3.scale.linear().domain([0, frequencyData.length / 4, frequencyData.length / 2, frequencyData.length * 0.75, frequencyData.length]).range(['#702A87', '#AEDD46', '#D71A75', '#FFDA0C', '#2FE2D9'])
+     var color = d3.scale.linear().domain([0, frequencyData.length / 4, frequencyData.length / 2, frequencyData.length * 0.75, frequencyData.length]).range(['#6157D4', '#AEDD46', '#D71A75', '#FFDA0C', '#2FE2D9'])
      // Update d3 chart with new data.
      svg.selectAll('rect')
          .data(frequencyData)
